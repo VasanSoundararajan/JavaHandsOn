@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vishwas | Portfolio</title>
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:linear-gradient(120deg,#0f2027,#203a43,#2c5364);
+  color:white;
+  overflow-x:hidden;
+}
+
+/* HERO SECTION */
+.hero{
+  text-align:center;
+  padding:80px 20px;
+}
+.hero h1{
+  font-size:3rem;
+  animation:slideDown 1.2s ease;
+}
+.hero p{
+  font-size:1.2rem;
+  opacity:0.8;
+  animation:fadeIn 2s ease;
+}
+
+/* CARD GRID */
+.container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+  padding:40px;
+}
+
+/* CARD STYLE */
+.card{
+  background:rgba(255,255,255,0.08);
+  border-radius:20px;
+  padding:25px;
+  backdrop-filter:blur(12px);
+  transition:all 0.4s ease;
+}
+
+.card:hover{
+  transform:translateY(-15px) scale(1.05);
+  box-shadow:0 20px 40px rgba(0,0,0,0.5);
+}
+
+.card h2{
+  color:#00e6ff;
+  margin-bottom:12px;
+}
+
+.card ul{
+  padding-left:18px;
+}
+
+/* FLOATING ANIMATION */
+.float{
+  animation:float 4s ease-in-out infinite;
+}
+.float-delay{
+  animation:float 4s ease-in-out infinite;
+  animation-delay:1.5s;
+}
+
+@keyframes float{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-12px);}
+  100%{transform:translateY(0);}
+}
+
+/* TEXT ANIMATIONS */
+@keyframes slideDown{
+  from{transform:translateY(-40px);opacity:0;}
+  to{transform:translateY(0);opacity:1;}
+}
+
+@keyframes fadeIn{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  opacity:0.8;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Vishwas S</h1>
+  <p>Computer Science Engineering Student | Web Developer</p>
+</section>
+
+<!-- CARDS -->
+<section class="container">
+
+  <div class="card float">
+    <h2>Career Objective</h2>
+    <p>
+      Motivated Computer Science Engineering student with strong web development skills and a passion for building
+      efficient, user-friendly digital experiences.
+    </p>
+  </div>
+
+  <div class="card float-delay">
+    <h2>Technical Skills</h2>
+    <ul>
+      <li>C++, Java, Python, C</li>
+      <li>HTML, CSS, JavaScript, React.js, Bootstrap</li>
+      <li>Node.js, Express, REST APIs</li>
+      <li>SQLite, Git, SDLC, Generative AI</li>
+    </ul>
+  </div>
+
+  <div class="card float">
+    <h2>Education</h2>
+    <p><b>B.E CSE</b> – KRCT, Trichy (2026)</p>
+    <p>CGPA: 7.04</p>
+    <p>HSC – 72% (2022)</p>
+    <p>SSLC – 85.4% (2020)</p>
+  </div>
+
+  <div class="card float-delay">
+    <h2>Projects</h2>
+    <p><b>Personal Finance Management System</b></p>
+    <p>Income & expense tracking, budget planning, savings & investment analysis.</p>
+    <br>
+    <p><b>AI Project Planner</b></p>
+    <p>AI-based task scheduling with NLP input system.</p>
+  </div>
+
+  <div class="card float">
+    <h2>Certifications</h2>
+    <ul>
+      <li>Microsoft Azure Fundamentals (AZ-900)</li>
+      <li>C Programming Certification</li>
+    </ul>
+  </div>
+
+  <div class="card float-delay">
+    <h2>Achievements</h2>
+    <ul>
+      <li>Participated in coding competitions</li>
+      <li>District level handball tournament participant</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>📍 Cuddalore, Tamil Nadu</p>
+  <p>📧 vishwasbv.s.c@gmail.com | 📞 9944105162</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice</title>
+    <style>
+        body {
+    display: grid;
+    place-items: center;       /* centers both vertically & horizontally */
+    height: 100vh;
+}
+
+        #diceValue{
+            display: grid;
+            place-items: center;
+            border: 2px solid black;
+            height: 100px;
+            width: 100px;
+            border-radius: 20px;
+            margin: 10px;
+            text-align: center;
+            vertical-align: center;
+        }
+        p{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body">
+    <h1  id="Dice">Dice</h1>
+    <div id="diceValue">
+        <p id = "diceV"></p>
+    </div>
+</body>
+<script>
+    const diceV = document.getElementById("diceV");
+    const diceValue = document.getElementById("diceValue");
+
+    function rollDice() {
+        const roll = Math.floor(Math.random() * 6) + 1;
+        diceV.textContent = roll;
+    }
+
+    diceValue.addEventListener("click", rollDice);
+</script>
+</html>

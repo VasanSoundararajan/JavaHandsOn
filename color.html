@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changes</title>
+    <style>
+        body{
+            height: max-content;
+            width: max-content;
+            margin: auto;
+        }
+        .color-box {
+            border-radius: 20%;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            background: #000;
+            width: 100px;
+            height: 100px;
+            margin-left:auto;
+            margin-right: auto;
+        }
+        input:in-range{
+            start
+        }
+        #red{
+            margin-left:0;
+            margin-right:auto;
+        }
+        #green{
+            margin:auto;
+        }
+        #blue{
+            margin-right:0;
+            margin-left:auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="color-box"></div><br><br>
+    <input type="range" name="red" id="red" min="0" max="255" value="0"/>
+    <input type="range" name="green" id="green" min="0" max="255" value="0"/>
+    <input type="range" name="blue" id="blue" min="0" max="255" value="0"/>
+</body>
+<script>
+    const red = document.getElementById("red");
+    const green = document.getElementById("green");
+    const blue = document.getElementById("blue");
+    function colorChange(){
+        const colorBox = document.querySelector(".color-box");
+        colorBox.style.backgroundColor = 'rgb('+red.value+','+green.value+','+blue.value+')';
+    }
+    red.addEventListener('input', colorChange);
+    green.addEventListener('input', colorChange);
+    blue.addEventListener('input', colorChange);
+</script>
+</html>
